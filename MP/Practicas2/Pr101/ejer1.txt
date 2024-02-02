@@ -1,0 +1,11 @@
+float ** tabla;
+tabla [2][3];
+
+a) Puntero a tabla [0]
+b) Puntero a tabla [1]
+c) Puntero a tabla [1][0]
+d) Puntero a tabla [1][1]
+e) Puntero a tabla [0][1]
+f) 2.2
+g) 1.2
+h) 2.1
