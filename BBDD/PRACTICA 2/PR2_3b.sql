@@ -1,0 +1,2 @@
+SELECT provincias.nombre as "Provincia", provincias.numerohabitantes, localidades.numerohabitantes as "Habitantes Localidad" FROM provincias, localidades
+WHERE substr(to_char(localidades.numerohabitantes),-1,1) = substr(to_char(provincias.numerohabitantes),-1,1);

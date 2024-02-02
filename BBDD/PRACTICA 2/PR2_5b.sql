@@ -1,0 +1,2 @@
+SELECT nombrecompleto, fechanacimiento FROM votantes
+WHERE (nombrecompleto LIKE '%s%' OR nombrecompleto LIKE 'S%' OR nombrecompleto LIKE '%S%' OR nombrecompleto LIKE '%s') AND  fechanacimiento < '12/02/1990';
