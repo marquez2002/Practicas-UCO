@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    align-items: center;
+    background-color: #111;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .edit {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px; /* Space between buttons */
+    padding: 10px 20px;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 5px;
+}
+
+header .edit:first-child {
+    margin-left: 0; /* No margin for the first button */
+}
+
+header .edit:hover {
+    transform: scale(1.1);
+    background-color: #333; /* Optional background color on hover */
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 80px; /* Space for fixed header */
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.container h1, .container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="submit"],
+button {
+    padding: 12px 24px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    width: 100%; /* Ensures all buttons have the same width */
+    max-width: 300px; /* Maximum width */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:active,
+button:active {
+    transform: scale(0.98);
+}
+
+button.fake-small-button {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button.small-button {
+    background-color: #dc3545;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+
+::placeholder {
+    color: #999;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table caption {
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+td {
+    background-color: #fff;
+}
+
+#error-container {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.information {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.information[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.information[data-tooltip]:hover::after {
+    opacity: 1;
+}
